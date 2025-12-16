@@ -25,7 +25,7 @@ void loop() {
   // -------------------------------------
   if (millis() - tempTimer >= pauseTemp) {
     tempTimer = millis();  // сбросить таймер
-    // getTempAdd();
+    // getTempAdd();  // Функция проверки температуры
     //isComprOn = cycl.goCompr(thol, tmor);// временно убрал для проверки
     // kn = sklad.getKn();
     delay(5);
