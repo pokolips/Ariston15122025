@@ -19,7 +19,7 @@ void setup() {
     digitalWrite(i, LOW);
   }
   work.setTemp();
-  
+
     while (kn == true){
     tmor = 8;
   }
@@ -51,4 +51,5 @@ int myFunction(){
   while (kn == true){
     tmor = 8;
   }
+  return tmor;
 }
