@@ -6,15 +6,19 @@
 
 
 // put function declarations here:
-int myFunction(int, int);
+int myFunction();
 
 void setup() {
   // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+
   for (uint8_t i = firstLed; i <= lastLed; i++){
     pinMode(i, OUTPUT);
     digitalWrite(i, LOW);
   }
+    while (kn == true){
+    tmor = 8;
+  }
+  //  myFunction();
 }
 
 void loop() {
@@ -35,5 +39,11 @@ void loop() {
   if (millis() - klapanTimer >= 300000) {
     klapanTimer = millis();  // сбросить таймер
 
+  }
 }
+int myFunction(){
+
+  while (kn == true){
+    tmor = 8;
+  }
 }
