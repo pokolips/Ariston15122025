@@ -3,10 +3,13 @@
 #include <OneWire.h>
 #include <U8glib.h>
 #include"Dannye.h"
+#include "WorksHol.h"
 
 
 // put function declarations here:
 int myFunction();
+
+WorksHol work;
 
 void setup() {
   // put your setup code here, to run once:
@@ -15,6 +18,8 @@ void setup() {
     pinMode(i, OUTPUT);
     digitalWrite(i, LOW);
   }
+  work.setTemp();
+  
     while (kn == true){
     tmor = 8;
   }
