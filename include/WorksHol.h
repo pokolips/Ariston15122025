@@ -12,8 +12,8 @@ public:
     // ~WorksHol();
     void setTemp();
     void setKn();
-    uint8_t getTempHol();
-    uint8_t getTempMor();
+    int getTempHol();
+    int getTempMor();
 
     private:
     uint8_t _compr = 5;
@@ -21,6 +21,10 @@ public:
     uint8_t fan = 7;
     uint8_t _lamp = 8;
     uint8_t _ledCompr = 9;
+    int _thol;
+    int _tmor;
+    int _tisp;
+
 };
 
 // WorksHol::WorksHol(/* args */)
