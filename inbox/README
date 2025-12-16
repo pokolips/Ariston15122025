@@ -13,7 +13,7 @@
     digitalWrite(compr, LOW);
     s = (F("isComprOn !"));
     comprEndCycle();
-  }*/ 
+  }*/
    /* if (digitalRead(compr) == HIGH) {  // Ещё одна ошибка
     s = (F("ON"));                   //Повторения не будет?----------
     if (millis() - myTimer4 >= 2400000) {
@@ -47,8 +47,8 @@
       // uint8_t temOld = termo.getOldTemp();
    /* switch (temOld) {
         //##############################################################
-         / Нужно исправить в классе Temperature -> uint8_t getOldTemp(); 
- температурныый расчёт (Подправлено, требует проверки.) 
+         / Нужно исправить в классе Temperature -> uint8_t getOldTemp();
+ температурныый расчёт (Подправлено, требует проверки.)
       case 0: isCheckingPass = termo.getCheckPasss(); break;
       //case 1:isCheckingPass = termo.getCheckPasss(); workHol = false; break;
       //case 2:isCheckingPass = termo.getCheckPasss(); workHol = true; break;
@@ -74,3 +74,4 @@
 int myFunction(int x, int y) {
   return x + y;*/
   }
+  
