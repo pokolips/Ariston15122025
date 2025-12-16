@@ -19,21 +19,9 @@ void setup() {
 
 void loop() {
 
-  /*Проверяет температуру, переменную отключения компрессора, состояние клапана.*/
-  // uint8_t tmpr = 0;
-  // bool error;
+
   unsigned long currentMillis = millis();
-  // com = (F("loop"));
- /*if (isComprOn == 1 && flag == false) {
-    digitalWrite(compr, HIGH);
-    flag = true;  // и тут ошибка ==
-    s = (F("Work !"));
-    //Сюда написать код с задержкой 5 минут для работы
-  } else if (isComprOn == 0 && flag == true) {
-    digitalWrite(compr, LOW);
-    s = (F("isComprOn !"));
-    comprEndCycle();
-  }*/ 
+
   // -------------------------------------
   if (millis() - tempTimer >= pauseTemp) {
     tempTimer = millis();  // сбросить таймер
@@ -43,67 +31,10 @@ void loop() {
     delay(5);
   }
   // -------------------------------------
- /* if (digitalRead(compr) == HIGH) {  // Ещё одна ошибка
-    s = (F("ON"));                   //Повторения не будет?----------
-    if (millis() - myTimer4 >= 2400000) {
-      myTimer4 = millis();  // сбросить таймер
-      //flag = true;                          // Флаг подняли
-      stch = 0;
-      isComprOn = 0;  //ошибка! было ==
-      //comprEndCycle();
-      delay(5);
-    }
-    // -------------------------------------
-    if (!isLoadOn && currentMillis - previousMillis >= intervalOff) {
-      // Включаем нагрузку после интервала выключения
-      isLoadOn = true;
-      previousMillis = currentMillis;
-      digitalWrite(fanPin, HIGH);
-    } else if (isLoadOn && currentMillis - previousMillis >= intervalOn) {
-      // Выключаем нагрузку после интервала включения
-      isLoadOn = false;
-      previousMillis = currentMillis;
-      digitalWrite(fanPin, LOW);
-    }
-  }
-  // -------------------------------------
-  if (isCheckingPass) {
-    getTempAdd();                  // Проверяем тем-ру
-    termo.setTempOld(thol, tmor);  // Записываем в память
-      // считанную температуру передаём в класс getOldTemp();
-    isCheckingPass = !isCheckingPass;
-  }*/
+
   // ----------проверка состояния клапана---------------------------
   if (millis() - klapanTimer >= 300000) {
     klapanTimer = millis();  // сбросить таймер
-    // uint8_t temOld = termo.getOldTemp();
-   /* switch (temOld) {
-        //##############################################################
-         / Нужно исправить в классе Temperature -> uint8_t getOldTemp(); 
- температурныый расчёт (Подправлено, требует проверки.) 
-      case 0: isCheckingPass = termo.getCheckPasss(); break;
-      //case 1:isCheckingPass = termo.getCheckPasss(); workHol = false; break;
-      //case 2:isCheckingPass = termo.getCheckPasss(); workHol = true; break;
-      case 3:
-        isCheckingPass = termo.getCheckPasss();
-        workMor = false;
-        break;
-      case 4:
-        isCheckingPass = termo.getCheckPasss();
-        workMor = true;
-        break;
 
-      default:
-        isCheckingPass = termo.getCheckPasss();  //посмотреть...getCheckPasss Это функция. Если вы хотите её вызвать, после неё нужно поставить круглые скобки
-        break;
-    }  //isCheckingPass = termo.getCheckPasss;
-    delay(5);
-  }
-  
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;*/
 }
 }
