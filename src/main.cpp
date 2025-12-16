@@ -19,7 +19,6 @@ void setup() {
 
 void loop() {
 
-
   unsigned long currentMillis = millis();
 
   // -------------------------------------
