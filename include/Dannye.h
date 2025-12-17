@@ -6,6 +6,7 @@
 
 int thol = 18;//
 int tmor = -1;//
+int sleep_count;
 bool kn;//
 uint32_t tempTimer, klapanTimer, FenTimer;
 uint32_t pauseTemp = 60000; //проверка температуры 
