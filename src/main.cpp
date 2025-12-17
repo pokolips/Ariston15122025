@@ -45,6 +45,8 @@ void loop() {
     klapanTimer = millis();  // сбросить таймер
 
   }
+
+  
 }
 int myFunction(){
 
@@ -52,4 +54,4 @@ int myFunction(){
     tmor = 8;
   }
   return tmor;
-}
+}                    
