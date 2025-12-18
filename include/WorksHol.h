@@ -10,20 +10,23 @@ class WorksHol {
 public:
     WorksHol(/* args */);
     // ~WorksHol();
-    void setTemp();
-    void setKn();
-    int getTempHol();
-    int getTempMor();
+    void setTemp(int thl, int tmr);//
+    void setTemp(uint8_t tempOld);//
+    void setTemp();//
+    void setKn();//
+    int getTempHol();//
+    int getTempMor();//
 
     private:
-    uint8_t _compr = 5;
-    uint8_t _kn = 6;
-    uint8_t fan = 7;
-    uint8_t _lamp = 8;
-    uint8_t _ledCompr = 9;
-    int _thol;
-    int _tmor;
-    int _tisp;
+    uint8_t _compr = 5;//
+    uint8_t _kn = 6;//
+    uint8_t fan = 7;//
+    uint8_t _lamp = 8;//
+    uint8_t _ledCompr = 9;//
+
+    int _thol;//
+    int _tmor;//
+    int _tisp;//
 
 };
 

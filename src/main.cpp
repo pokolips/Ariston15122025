@@ -9,6 +9,8 @@
 U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE | U8G_I2C_OPT_DEV_0);  // I2C / TWI
 // put function declarations here:
 int myFunction();
+void u8g_prepare(void);
+void text_Prob();
 
 WorksHol work;
 
@@ -23,7 +25,14 @@ void setup() {
 
   //Цикл установки клапана
     while (kn == true){
-    tmor = 8;
+        thol = work.getTempHol();//Принять параметры холодильника
+        tmor = work.getTempMor();//Принять параметры морозильника
+        delay(100);//Задержка
+        text_Prob();//Отошлём на дисплей
+        delay(1000);//Задержка
+        work.setTemp(thol, tmor);
+        
+
   }
   //  myFunction();
 }

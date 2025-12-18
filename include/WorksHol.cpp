@@ -11,6 +11,13 @@ void WorksHol::setTemp(){
   _thol = therm2.getTempAverage();
   _tisp = therm3.getTempAverage();
 }
+void WorksHol::setTemp(int thl, int tmr){
+  int _thl;
+  int _tmr;
+thl = _thl;
+tmr = _tmr;
+
+}
 int WorksHol::getTempHol(){
 return _thol;
 }
