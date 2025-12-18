@@ -27,6 +27,8 @@ public:
     int _thol;//
     int _tmor;//
     int _tisp;//
+    int _tholO;//
+    int _tmorO;//
 
 };
 
